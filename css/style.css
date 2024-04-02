@@ -1,0 +1,246 @@
+
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+* {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.wrapper__inner {
+    width: 375px;
+}
+
+
+.blockInput__answer {
+    height: 35px;
+    text-align: end;
+    background-color: #F1F2F3;
+    padding: 230px 28px 45px 20px;
+    border-radius: 45px 45px 0px 0px;
+}
+
+.calc__inner {
+    display: flex;
+    gap: 10px;
+}
+
+.resultSpan {
+    display: none; 
+    padding-top: 5px;
+    
+ }
+ 
+
+.inputAnswer {
+    margin-top: 15px;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.inputAnswer span {
+    font-size: 55px;
+    color: #000000;
+    font-weight: 300;
+}
+
+.resultSpan.changeLocation  {
+    display: block;
+    font-size: 50px;
+    color: #000000;
+    overflow-y: hidden;
+    overflow-x: scroll;
+     
+}
+
+.inputAnswer.changeLocation {
+    margin-top: -20px;
+
+}
+
+.inputAnswer.changeLocation span {
+    font-size: 30px;
+    color: #aeaeae;
+}
+
+.calcBlock {
+    position: relative;
+    background-color: #F1F2F3;
+    padding: 90px 20px 32px 20px;
+    border-radius: 0 0 45px 45px;
+}
+
+
+.num {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 19px;
+    font-size: 32px;
+    padding: 19px 25px;
+    cursor: context-menu;
+    font-weight: 500;
+    transition: all .2s;
+}
+
+.num:hover {
+    background-color: #ebebeb;
+}
+
+.num.delete {
+    padding: 12px 12px;
+}
+
+
+.calculateNumbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 16px;
+}
+
+
+.calculateAct-right {
+    position: absolute;
+    top: 8px;
+    right: 23px;
+
+
+    width: 71px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+
+
+.right {
+    border-radius: 24px;
+    font-size: 32px;
+    padding: 19px 21px;
+    cursor: context-menu;
+    background-color: #4B5EFC;
+    color: #fff;
+    font-weight: 400;
+    transition: all .2s;
+
+}
+
+.right:hover {
+    background-color: #3546e3;
+}
+
+
+.text-pop-up-bottom {
+	-webkit-animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes text-pop-up-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes text-pop-up-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+
+.calculateDeltesAllPlusMinusProcent {
+    position: absolute;
+    top: 8px;
+
+    display: flex;
+    gap: 16px;
+}
+
+.delteAll {
+    padding: 18px 16px;
+}
+
+.plusMinus {
+    padding: 18px 10px;
+}
+
+@media (max-width: 380px) {
+    .calculateAct-right {
+        width: 62px;
+    }
+    .wrapper__inner {
+        width: 335px;
+    }
+    .procent {
+    }
+    .right {
+        font-size: 30px;
+        padding: 16px 12px;
+        border-radius: 18px;
+    }
+    .calculateNumbers {
+        gap: 10px;
+    }
+    .calculateAct-right {
+        right: 17px;
+    }
+    .num {
+        font-size: 25px;
+        padding: 19px 24px;
+    }
+}
+
+@media (max-width: 340px) {
+    .blockInput__answer {
+        height: 25px;
+    }
+    .wrapper__inner {
+        width: 315px;
+    }
+    .num {
+        padding: 17px 22px;
+    }
+    .calculateAct-right {
+        width: 59px;
+    }
+    .right {
+        padding: 14px 12px;
+        border-radius: 15px;
+    }
+    .calculateDeltesAllPlusMinusProcent {
+        gap: 10px;
+    }
+}
